@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Le Bistro{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="{% url 'home' %}" class="logo">Le <span>Bistro</span></a>
+            <ul class="nav-links">
+                <li><a href="{% url 'home' %}" class="{% if request.path == '/' %}active{% endif %}">Home</a></li>
+                <li><a href="{% url 'appetizers' %}" class="{% if 'appetizers' in request.path %}active{% endif %}">Appetizers</a></li>
+                <li><a href="{% url 'main_courses' %}" class="{% if 'main' in request.path %}active{% endif %}">Main Courses</a></li>
+                <li><a href="{% url 'desserts_drinks' %}" class="{% if 'desserts' in request.path %}active{% endif %}">Desserts & Drinks</a></li>
+                <li><a href="{% url 'hours_location' %}" class="{% if 'hours' in request.path %}active{% endif %}">Hours & Location</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Le Bistro. All rights reserved.</p>
+    </footer>
+</body>
+</html>

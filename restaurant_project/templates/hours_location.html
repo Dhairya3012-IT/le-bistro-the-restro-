@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block title %}Hours & Location - Le Bistro{% endblock %}
+
+{% block content %}
+<h1>Hours & Location</h1>
+
+<div class="card-grid">
+    <div class="card">
+        <i class="fas fa-clock"></i>
+        <h3>Hours of Operation</h3>
+        <table style="width: 100%; margin-top: 1rem;">
+            <tr>
+                <td>Monday - Friday</td>
+                <td><strong>11:30 AM - 10:00 PM</strong></td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td><strong>5:00 PM - 11:00 PM</strong></td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td><strong>5:00 PM - 9:00 PM</strong></td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="card">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Location</h3>
+        <p style="margin: 1rem 0;">
+            123 Gourmet Street<br>
+            Culinary District<br>
+            New York, NY 10001
+        </p>
+    </div>
+    
+    <div class="card">
+        <i class="fas fa-phone"></i>
+        <h3>Contact</h3>
+        <p style="margin: 1rem 0;">
+            Phone: (555) 123-4567<br>
+            Email: reservations@lebistro.com
+        </p>
+    </div>
+</div>
+
+<div class="map-container">
+    <div class="map-placeholder">
+        <i class="fas fa-map"></i>
+        <h3>Interactive Map</h3>
+        <p>123 Gourmet Street, New York, NY 10001</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">📍 Google Maps would be embedded here</p>
+    </div>
+</div>
+
+<div class="menu-section">
+    <h2>Special Hours</h2>
+    <table class="info-table">
+        <tr>
+            <th>Date</th>
+            <th>Occasion</th>
+            <th>Hours</th>
+        </tr>
+        <tr>
+            <td>December 24</td>
+            <td>Christmas Eve</td>
+            <td>12:00 PM - 8:00 PM</td>
+        </tr>
+        <tr>
+            <td>December 25</td>
+            <td>Christmas Day</td>
+            <td>Closed</td>
+        </tr>
+        <tr>
+            <td>December 31</td>
+            <td>New Year's Eve</td>
+            <td>5:00 PM - 1:00 AM</td>
+        </tr>
+        <tr>
+            <td>January 1</td>
+            <td>New Year's Day</td>
+            <td>5:00 PM - 10:00 PM</td>
+        </tr>
+    </table>
+</div>
+{% endblock %}

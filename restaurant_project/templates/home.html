@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}Le Bistro - Home{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <h1>Welcome to Le Bistro</h1>
+    <p>Experience the finest cuisine in an elegant atmosphere</p>
+</div>
+
+<div class="card-grid">
+    <div class="card">
+        <i class="fas fa-utensils"></i>
+        <h3>Exquisite Dining</h3>
+        <p>Experience culinary excellence with our carefully crafted dishes</p>
+    </div>
+    <div class="card">
+        <i class="fas fa-wine-glass-alt"></i>
+        <h3>Fine Wines</h3>
+        <p>Perfectly paired wines from the world's best vineyards</p>
+    </div>
+    <div class="card">
+        <i class="fas fa-heart"></i>
+        <h3>Made with Love</h3>
+        <p>Every dish is prepared with passion and attention to detail</p>
+    </div>
+</div>
+
+<div class="menu-section">
+    <h2>Today's Specials</h2>
+    <div class="menu-item">
+        <div class="item-info">
+            <div class="item-name">Grilled Salmon <span class="badge badge-spicy">Spicy</span></div>
+            <div class="item-desc">Fresh Atlantic salmon with herbs and lemon butter sauce</div>
+        </div>
+        <div class="item-price">$24.99</div>
+    </div>
+    <div class="menu-item">
+        <div class="item-info">
+            <div class="item-name">Beef Wellington</div>
+            <div class="item-desc">Tender beef fillet wrapped in puff pastry with mushroom duxelles</div>
+        </div>
+        <div class="item-price">$34.99</div>
+    </div>
+    <div class="menu-item">
+        <div class="item-info">
+            <div class="item-name">Crème Brûlée</div>
+            <div class="item-desc">Classic vanilla bean custard with caramelized sugar top</div>
+        </div>
+        <div class="item-price">$9.99</div>
+    </div>
+</div>
+{% endblock %}
